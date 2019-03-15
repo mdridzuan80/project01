@@ -29,4 +29,14 @@ class DefaultController extends Controller
     {
         return view('resume.index');
     }
+
+    public function rancangan()
+    {
+        return view('rancangan.index');
+    }
+
+    public function javascript()
+    {
+        return view('javascript.index');
+    }
 }

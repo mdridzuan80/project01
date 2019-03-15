@@ -16,3 +16,5 @@ Route::get('/diri', 'DefaultController@diri');
 Route::get('/blog', 'DefaultController@blog');
 Route::get('/galeri', 'DefaultController@galeri');
 Route::get('/resume', 'DefaultController@resume');
+Route::get('/rancangan', 'DefaultController@rancangan');
+Route::get('/javascript', 'DefaultController@javascript');

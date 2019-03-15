@@ -52,7 +52,8 @@
           <li><a href="{{ url('blog') }}">Blog</a></li>
           <li><a href="{{ url('galeri') }}">Galeri</a></li>
           <li><a href="{{ url('resume') }}">Resume</a></li>
-          <li><a href="contact.html">Perancangan</a></li>
+          <li><a href="{{ url('rancangan') }}">Perancangan</a></li>
+          <li><a href="{{ url('javascript') }}">Javascript</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -76,16 +77,15 @@
         <div class="col-lg-4">
           <h4>My Links</h4>
           <p>
-            <a href="#">Dribbble</a><br/>
-            <a href="#">Twitter</a><br/>
-            <a href="#">Facebook</a>
+            <a href="https://github.com/mdridzuan80">Github</a><br/>
+            <a href="https://www.facebook.com/mdridzuan80">Facebook</a>
           </p>
         </div>
         <!-- /col-lg-4 -->
 
         <div class="col-lg-4">
           <h4>About Md.Ridzuan.Latiah</h4>
-          <p>This cute theme was created to showcase your work in a simple way. Use it wisely.</p>
+          <p>By Cory House. Anyone can write code a computer can understand, but professional developers write code *humans* can understand. Clean code is a reader-focused development style that produces software that's easy to write, read and maintain.</p>
         </div>
         <!-- /col-lg-4 -->
       </div>
@@ -109,6 +109,37 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{ url('js/main.js') }}"></script>
+    <script>
+    $(document).ready(function(){
+      $('.form-horizontal').on('submit', function(e) {
+        e.preventDefault();
+
+        if(!e.target.emp_name.value || !e.target.emp_number.value || !e.target.rate.value || !e.target.hour.value) {
+          alert('Please enter the value');
+          return;
+        }
+        
+        var normal_hour = 40;
+        var extended = 1.5;
+        var total = 0;
+
+        var input_emp_name = e.target.emp_name.value;
+        var input_emp_number = e.target.emp_number.value;
+        var input_hour = parseFloat(e.target.hour.value);
+        var input_rate = parseFloat(e.target.rate.value);
+
+        if(input_hour < normal_hour) {
+          total = input_hour * input_rate * 1;
+        }
+        else
+        {
+          total = ((normal_hour * input_rate) + ((input_hour-normal_hour)*extended*input_rate)) ;
+        }
+
+        alert('Paid amount for ' + input_emp_name + ' is RM' + total);
+      });
+    });
+    </script>
 
 </body>
 </html>
