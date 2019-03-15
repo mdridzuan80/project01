@@ -24,4 +24,9 @@ class DefaultController extends Controller
     {
         return view('galeri.index');
     }
+
+    public function resume()
+    {
+        return view('resume.index');
+    }
 }

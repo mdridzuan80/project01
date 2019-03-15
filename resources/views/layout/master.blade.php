@@ -23,6 +23,8 @@
   <!-- Main Stylesheet File -->
   <link href="{{ url('css/style.css') }}" rel="stylesheet">
 
+  <link href="{{ url('css/style_resume.css') }}" rel="stylesheet">
+
   <!-- =======================================================
     Template Name: Stanley
     Template URL: https://templatemag.com/stanley-bootstrap-freelancer-template/
@@ -49,7 +51,7 @@
           <li><a href="{{ url('diri') }}">Diri Ini</a></li>
           <li><a href="{{ url('blog') }}">Blog</a></li>
           <li><a href="{{ url('galeri') }}">Galeri</a></li>
-          <li><a href="about.html">Resume</a></li>
+          <li><a href="{{ url('resume') }}">Resume</a></li>
           <li><a href="contact.html">Perancangan</a></li>
         </ul>
       </div>

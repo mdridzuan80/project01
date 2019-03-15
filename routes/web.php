@@ -15,3 +15,4 @@ Route::get('/', 'DefaultController@index');
 Route::get('/diri', 'DefaultController@diri');
 Route::get('/blog', 'DefaultController@blog');
 Route::get('/galeri', 'DefaultController@galeri');
+Route::get('/resume', 'DefaultController@resume');
