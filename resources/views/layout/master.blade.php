@@ -109,7 +109,7 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{ url('js/main.js') }}"></script>
-    <script>
+  <script>
     $(document).ready(function(){
       $('.form-horizontal').on('submit', function(e) {
         e.preventDefault();
@@ -130,16 +130,16 @@
 
         if(input_hour < normal_hour) {
           total = input_hour * input_rate * 1;
-        }
-        else
-        {
+        } else {
           total = ((normal_hour * input_rate) + ((input_hour-normal_hour)*extended*input_rate)) ;
         }
 
         alert('Paid amount for ' + input_emp_name + ' is RM' + total);
+
+        return;
       });
     });
-    </script>
+</script>
 
 </body>
 </html>
